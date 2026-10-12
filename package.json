@@ -1,0 +1,6 @@
+{
+  "name": "apparel-inquiry-api",
+  "private": true,
+  "type": "module",
+  "description": "HAICE Apparel inquiry form backend on Vercel (served as apparel-api.haice.top). Sends via Resend."
+}
