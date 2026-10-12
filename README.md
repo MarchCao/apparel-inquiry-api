@@ -18,3 +18,10 @@ DNS 在 DNSPod 加 CNAME 指向 Vercel）。
 ## 域名
 `apparel-api.haice.top` — Vercel 项目 Domains 添加后，在 DNSPod 加 CNAME：
 主机记录 `apparel-api` → `cname.vercel-dns.com`（以 Vercel 后台显示为准）。
+
+## Supabase 版（当前主推）
+`supabase/functions/inquiry/index.ts` — 部署到项目 crm（exvsglemldxqunmrbvez）的 Edge Function，
+入口 `https://exvsglemldxqunmrbvez.supabase.co/functions/v1/inquiry`，`verify_jwt = false`。
+选它是因为 `*.supabase.co` 已由用户手机实测可达（2026-10-12），且用户已有 Supabase 账号、无需新平台审核。
+密钥：`supabase secrets set RESEND_API_KEY=...`（只存 Supabase，不进仓库）。
+注意：该函数与供应链数据库无任何关系；今后若删除 crm 项目，须先把本函数迁走（源码以本仓库为准，一条命令可重新部署到任意项目）。

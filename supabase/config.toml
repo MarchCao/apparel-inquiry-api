@@ -1,0 +1,4 @@
+project_id = "exvsglemldxqunmrbvez"
+
+[functions.inquiry]
+verify_jwt = false
